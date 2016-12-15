@@ -13,7 +13,7 @@
 | test_id           | 用例id       | 0001      | /         | 否    |
 | test_control_type | 查找控件方式     | xapth     | xpath, id | 否    |
 | test_action       | 操作方法       | click     | 见下表       | 是    |
-| test_control      | 控件         | com.xx.id | /         | 否    |
+| test_control      | 控件         | com.xx.id | /         | 是    |
 | test_text         | 断言、输入文本    | test      | /         | 否    |
 | test_inherit      | 继承用例名      | login     | /         | 否    |
 | test_range        | 循环本步骤次数    | 2         | /         | 否    |
@@ -34,43 +34,133 @@
 ```yaml
 ---
 -
-  test_name: 点击跳过
+  test_name: 已有账号，去登录
   test_id: 0001
-  test_control_type: id
+  test_control_type: text
   test_action: click
-  test_control: test.joko.com.myapplication:id/button1
+  test_control: 已有账号，去登录
 -
   test_name: 输入帐号名
   test_id: 0002
-  test_control_type: id
+  test_control_type: class
   test_action: send_keys
-  test_control: test.joko.com.myapplication:id/editText
-  test_text: 199999999
+  test_control: android.widget.EditText
+  test_text: samuel
+  test_index: 0
 -
   test_name: 输入密码
   test_id: 0003
-  test_control_type: id
+  test_control_type: class
   test_action: send_keys
-  test_control: test.joko.com.myapplication:id/editText2
-  test_text: 9999
+  test_control: android.widget.EditText
+  test_text: 123456
+  test_index: 1
 
 -
-  test_name: 点击登录
+  test_name: 登录
   test_id: 0004
-  test_control_type: xpath
+  test_control_type: text
   test_action: click
-  test_control: //android.widget.Button[contains(@text,'确定')]
+  test_control: 登录
 
 -
-  test_name: 向上滑动页面
+  test_name: 创建工单
   test_id: 0005
-  test_action: swipe_up
-  test_range: 3
+  test_control_type: id
+  test_action: click
+  test_control: 创建工单
+-
+  test_name: NancyCustomer1
+  test_id: 0006
+  test_control_type: text
+  test_action: click
+  test_control: NancyCustomer1
+-
+  test_name: 资产范围
+  test_id: 0007
+  test_control_type: text
+  test_action: click
+  test_control: 资产范围
+  test_sleep: 3
 
 -
-  test_name: 向下滑动页面
-  test_id: 0005
-  test_action: swipe_down
-  test_range: 3
+  test_name: 楼宇BADGOOD
+  test_id: 0008
+  test_control_type: text
+  test_action: click
+  test_control: 楼宇BADGOOD  
+
+-
+  test_name: 5层公共照明
+  test_id: 0009
+  test_control_type: text
+  test_action: click
+  test_control: 5层公共照明 
+
+-
+  test_name: 完成
+  test_id: 0010
+  test_control_type: text
+  test_action: click
+  test_control: 完成 
+
+-
+  test_name: 执行人
+  test_id: 0011
+  test_control_type: text
+  test_action: click
+  test_control: 执行人 
+  test_sleep: 3
+
+-
+  test_name: abcnew
+  test_id: 0012
+  test_control_type: text
+  test_action: click
+  test_control: abcnew
+
+-
+  test_name: 1234
+  test_id: 0013
+  test_control_type: text
+  test_action: click
+  test_control: 1234
+
+-
+  test_name: 完成
+  test_id: 0014
+  test_control_type: text
+  test_action: click
+  test_control: 完成 
+
+-
+  test_name: 工单任务
+  test_id: 0015
+  test_control_type: text
+  test_action: click
+  test_control: 工单任务 
+
+-
+  test_name: robotCreate
+  test_id: 0016
+  test_control_type: class
+  test_action: send_keys
+  test_control: android.widget.EditText
+  test_text: his is robot create ticket2.
+
+-
+  test_name: 完成
+  test_id: 0017
+  test_control_type: text
+  test_action: click
+  test_control: 完成 
+
+-
+  test_name: 保存
+  test_id: 0018
+  test_control_type: text
+  test_action: click
+  test_control: 保存 
+  
 
 ```

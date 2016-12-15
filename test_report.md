@@ -12,3 +12,5 @@
 * case_per:会比对上一次与本次的性能状态截图
 * case_log:本case全量log
 * case_filter_log:筛选后log
+
+![](https://whuhan2013.github.io/Auto_Analysis/p1.png)
