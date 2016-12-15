@@ -2,7 +2,7 @@
 Appium作为一个开源的、跨平台的自动化测试工具，适用于测试原生或混合型移动App。 Appium的核心是一个web服务器，他使用WebDriver json wire协议，来驱动系统的UIAutomation库。WebDriver Json wire协议的Server端采用node.js封装了iOS UI Automation的接口，提供提供出一套RESTFul web service的接口，这样Client端以HTTP请求获得操纵UI的能力。
 
 说到底，真正执行测试的还是 UIAutomation，Appium只是封装或解释了UIAutomation的执行脚本，作为UIAutomation和被测试APP的中间层传递消息。
-![](../p2.png =800)
+<img src="https://whuhan2013.github.io/Auto_Analysis/p2.png" width="800">
 
 appium的优缺点
 
