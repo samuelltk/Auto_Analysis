@@ -1,20 +1,11 @@
 ## 控件查找方法
 
-### id查找方式
-* 利用Android sdk 自带的uiautomatorviewer工具
+### text查找方式
+* 根据文字的属性查找,大多数情况可以用这种方式搞定
 
-### xpath的查找方式
+### class的查找方式
 
-(资料)[http://www.cnblogs.com/paulwinflo/p/4738904.html]
+通过类型查找，比如在输入用户名与密码时需要使用class类型，并且如果有两个相同类型的话，还要用test_index表明次序。
 
-* 根据文字的属性查找
-
-//android.widget.TextView[contains(@text,'19')]
-
-* 根据控件的index数组下标查找
-
-//android.widget.TextView[contains(@index,0)]
-
-* 根据相对路径来查找,从明显的分界来查找
-
-//android.widget.LinearLayout[1]/android.widget.FrameLayout/android.widget.ListView/android.widget.TextView[contains(@index,0)]
+### id查找方式     
+通过id查找，主要适用于一些没有文字的按钮，比如创建工单
