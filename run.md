@@ -28,22 +28,3 @@
 
 * Linux:sudo apt-get install python-matplotlib
 
-### 参数配置
-
-* 参见:parameter_configuration文档
-
-### 用例编写
-
-* 参见test_case_writing文档
-
-### 测试报告
-
-* 参见test_report文档
-
-### 其他
-
-* appium:appium_wiki文档
-
-* 控件查找:controls_operations文档
-
-* 如果想单线程运行,请运行:po.integration
