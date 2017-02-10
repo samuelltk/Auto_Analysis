@@ -130,14 +130,19 @@ $ app-inspector -u xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 
 
 Android 端      
+
 <img src="http://ww4.sinaimg.cn/large/7dfcf2f7gw1f7bwlhpakwg20s40kge3k.gif" width="800"/>
 
-iOS 端
+
+
+iOS端
+
 <img src="http://ww4.sinaimg.cn/large/7dfcf2f7gw1f7bwp1mgiyg20s40kg7wh.gif" width="800"/>        
 
 
 
-**生成漂亮的测试报告**             
+#### 生成漂亮的测试报告
+          
 1.在测试目录下，安装mochawesome模块。（安装命令:npm install --save-dev mochawesome)            
 2.在配置文件mocha.opts，增加--reporter mochawesome，如果已经有了这一项，修改即可。          
 3.运行测试的时候，增加参数 --reporter mochawesome。(如：macaca run --verbose -d ./macaca-test/macaca-mobile-sample.test.js --reporter mochawesome）          
