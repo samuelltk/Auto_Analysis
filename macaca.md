@@ -23,4 +23,13 @@ Macaca 拥有庞大的用户群，自我生长的开源形态和优质的中文�
 **安装 Node.js**        
 请安装 Node.js v4.0 或者更高版本，装好 Node.js 后命令行里就已经集成了 npm 工具，为了提高安装模块的速度，请使用国内的 cnpm。
 
+**iOS 环境**       
+请安装 Xcode8 或者更高版本      
 
+需要安装 usbmuxd 以便于通过 USB 通道测试 iOS 真机，不需要测试真机则不用安装      
+$ brew install usbmuxd       
+应用中如含有 WebView，请安装 ios-webkit-debug-proxy
+$ brew install ios-webkit-debug-proxy
+
+备注：使用brew命令需要安装Homebrew（一款常用的 MacOS 的包管理器），请按照官网提示安装。           
+准备 App 包：如需要测试 iOS 应用，请使用 Scheme 设置为 debug 的 .app 包。
