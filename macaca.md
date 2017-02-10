@@ -69,6 +69,77 @@ $ npm i
 $ macaca run --verbose
 ```
 
+
 <img src="http://images2015.cnblogs.com/blog/46057/201606/46057-20160608194438090-960057521.gif" width="800">
+
+**用例编写**         
+
+```
+var wd = require('macaca-wd');
+
+var remoteConfig = {
+  host: 'localhost',
+  port: 3456
+};
+
+var driver = wd.promiseChainRemote(remoteConfig);
+
+before(function() {
+  return driver.init({
+    platformName: 'desktop', // iOS, Android, Desktop
+    browserName: 'chrome'    // Chrome, Electron
+    app: path/to/app         // Only for mobile
+  });
+});
+
+after(function() {
+  return driver
+    .sleep(1000)
+    .quit();
+});
+
+it('#1 should', function() {
+
+  ...
+
+});
+```
+
+
+支持以下动作：             
+1.点击       
+2.输入值     
+3.滑动     
+4.长按       
+5.可判断文字是否正确      
+6.截图          
+
+
+元素查找方式：        
+1.elementById       
+2.elementByName        
+3.elementByXPath        
+
+#### 元素查看器             
+安装                       
+$ npm i app-inspector -g         
+
+用法                    
+直接 -u + 设备的 udid 即可                                  
+$ app-inspector -u xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx       
+
+
+Android 端      
+<img src="http://ww4.sinaimg.cn/large/7dfcf2f7gw1f7bwlhpakwg20s40kge3k.gif" width="800">
+
+iOS 端
+<img src="http://ww4.sinaimg.cn/large/7dfcf2f7gw1f7bwp1mgiyg20s40kg7wh.gif" width="800">        
+
+
+
+**生成漂亮的测试报告**             
+1.在测试目录下，安装mochawesome模块。（安装命令:npm install --save-dev mochawesome)            
+2.在配置文件mocha.opts，增加--reporter mochawesome，如果已经有了这一项，修改即可。          
+运行测试的时候，增加参数 --reporter mochawesome。(如：macaca run --verbose -d ./macaca-test/macaca-mobile-sample.test.js --reporter mochawesome）
 
 
