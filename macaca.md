@@ -47,4 +47,14 @@ $ npm i -g macaca-cli
 如果看到如下可爱的🐒，那恭喜你安装成功啦！重新安装则会覆盖更新。           
 ![](http://ww4.sinaimg.cn/large/6d308bd9gw1faie2w55hnj20rs0ov4fu.jpg)
 
+**安装驱动（不同驱动适应不同平台的支持）**                                        
+上述驱动可以按照自身需要选择性的安装，比如只需要测试 iOS平台用例，就执行iOS的安装命令：             
+$ npm i macaca-ios -g     
+
+**环境检查**     
+通过 macaca doctor 可以检查环境是否配置成功       
+$ macaca doctor           
+如下图所示则表示环境均配置正常，如果有标红提示，则需要对应处理。           
+![](http://ww1.sinaimg.cn/large/6b65a607jw1fa3cqjexk2j21c20padqa.jpg)            
+
 
