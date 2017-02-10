@@ -130,16 +130,23 @@ $ app-inspector -u xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 
 
 Android 端      
-<img src="http://ww4.sinaimg.cn/large/7dfcf2f7gw1f7bwlhpakwg20s40kge3k.gif" width="800">
+<img src="http://ww4.sinaimg.cn/large/7dfcf2f7gw1f7bwlhpakwg20s40kge3k.gif" width="800"/>
 
 iOS 端
-<img src="http://ww4.sinaimg.cn/large/7dfcf2f7gw1f7bwp1mgiyg20s40kg7wh.gif" width="800">        
+<img src="http://ww4.sinaimg.cn/large/7dfcf2f7gw1f7bwp1mgiyg20s40kg7wh.gif" width="800"/>        
 
 
 
 **生成漂亮的测试报告**             
 1.在测试目录下，安装mochawesome模块。（安装命令:npm install --save-dev mochawesome)            
 2.在配置文件mocha.opts，增加--reporter mochawesome，如果已经有了这一项，修改即可。          
-运行测试的时候，增加参数 --reporter mochawesome。(如：macaca run --verbose -d ./macaca-test/macaca-mobile-sample.test.js --reporter mochawesome）
+3.运行测试的时候，增加参数 --reporter mochawesome。(如：macaca run --verbose -d ./macaca-test/macaca-mobile-sample.test.js --reporter mochawesome）          
+
+以上全部完成后，会在测试项目根目录下，多出来一个名字为mochawesome-reports的目录，这个就是生成的测试报告，在浏览器中打开，就可以看报告了。
+
+以下就是最终的测试报告截图
+<img src="https://testerhome.com/photo/2016/d9a4bb9f3c3a52c7b67445e83166d38a.png" width="800"/>
+
+#### 原理浅析         
 
 
