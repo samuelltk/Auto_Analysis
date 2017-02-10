@@ -159,7 +159,7 @@ iOS端
 **模块拆分讲解**           
 
 **macaca**         
-1. macaca-cli
+1.macaca-cli
 
 Macaca提供的命令行工具
 
@@ -169,11 +169,11 @@ $macaca server --verbose 启动server并打印详细日志
 
 $macaca doctor 检验当前macaca环境配置
 
-2. app-inspector
+2.app-inspector
 
 macaca提供的元素查找工具，可以将app视图的结构以布局结构树的格式在浏览器上展示出来，用过点击某个元素，就可以方便的查询到该控件的基本信息，以方便查找。具体使用可参考官网: https://macacajs.com/inspector
 
-3. UI Recorder
+3.UI Recorder
 
 macaca提供的脚本录制工具，可以通过录制获得脚本，对于入门同学很有帮助。https://macacajs.com/recorder
 
@@ -195,5 +195,5 @@ client端简单来讲就是我们的测试代码，我们测试代码中的一�
 **Macaca执行流程图**
 
 了解了Macaca的组成模块以及他们各自的作用，下面我们看一下各个模块是如何组装起来实现自动化测试流程的
-![](http://ww2.sinaimg.cn/large/6b65a607gw1fai80e6lxpj21ft0rhk0e.jpg)        
+<img src="http://ww2.sinaimg.cn/large/6b65a607gw1fai80e6lxpj21ft0rhk0e.jpg" width="800">       
 
