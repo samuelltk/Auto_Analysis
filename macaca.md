@@ -142,7 +142,7 @@ iOS端
 
 
 #### 生成漂亮的测试报告
-          
+
 1.在测试目录下，安装mochawesome模块。（安装命令:npm install --save-dev mochawesome)            
 2.在配置文件mocha.opts，增加--reporter mochawesome，如果已经有了这一项，修改即可。          
 3.运行测试的时候，增加参数 --reporter mochawesome。(如：macaca run --verbose -d ./macaca-test/macaca-mobile-sample.test.js --reporter mochawesome）          
@@ -154,4 +154,46 @@ iOS端
 
 #### 原理浅析         
 
+<img src="http://ww2.sinaimg.cn/large/6b65a607gw1fai803sahcj21ez0s1tis.jpg" width="800">      
+
+**模块拆分讲解**           
+
+**macaca**         
+1. macaca-cli
+
+Macaca提供的命令行工具
+
+$macaca server 启动server
+
+$macaca server --verbose 启动server并打印详细日志
+
+$macaca doctor 检验当前macaca环境配置
+
+2. app-inspector
+
+macaca提供的元素查找工具，可以将app视图的结构以布局结构树的格式在浏览器上展示出来，用过点击某个元素，就可以方便的查询到该控件的基本信息，以方便查找。具体使用可参考官网: https://macacajs.com/inspector
+
+3. UI Recorder
+
+macaca提供的脚本录制工具，可以通过录制获得脚本，对于入门同学很有帮助。https://macacajs.com/recorder
+
+
+**WebDriver-Server**
+
+Macaca是按照经典的Server-Client设计模式进行设计的，也就是我们常说的C/S架构。WebDriver-server部分便充当了server这部分的角色，他的职责就是等待client发送请求并做出响应。
+
+**WebDriver-Client**
+
+client端简单来讲就是我们的测试代码，我们测试代码中的一些行为，比如控件查找、点击等，这些行为以http请求的方式发送给server,server接收请求，并执行相应操作，并在response中返回执行状态、返回值等信息。
+
+也正是基于这种经典的C/S架构，所以client端具有跨语言的特点，macaca-wd，wd.java,wd.py分别是Macaca团队针对Js Java 以及Python的封装,只要能保证client端按照指定的要求发送Http请求，任意语言都可以。
+
+**DriverList**
+
+自动化要在不同的平台上跑，需要有对应平台的驱动，这部分驱动接收到来自server的操作命令，驱动各自平台的底层完成对应的操作。
+
+**Macaca执行流程图**
+
+了解了Macaca的组成模块以及他们各自的作用，下面我们看一下各个模块是如何组装起来实现自动化测试流程的
+![](http://ww2.sinaimg.cn/large/6b65a607gw1fai80e6lxpj21ft0rhk0e.jpg)        
 
