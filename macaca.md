@@ -57,3 +57,18 @@ $ macaca doctor
 如下图所示则表示环境均配置正常，如果有标红提示，则需要对应处理。                  
 <img src="http://ww1.sinaimg.cn/large/6b65a607jw1fa3cqjexk2j21c20padqa.jpg" width="800">
 
+#### 运行第一个测试案例        
+首先下载案例app:mobile-app-sample-nodejs到本地                       
+
+```
+$ npm i macaca-cli macaca-ios -g
+$ git clone https://github.com/macaca-sample/mobile-app-sample-nodejs.git --depth=1
+$ cd mobile-app-sample-nodejs
+# 安装项目依赖
+$ npm i
+$ macaca run --verbose
+```
+
+<img src="http://images2015.cnblogs.com/blog/46057/201606/46057-20160608194438090-960057521.gif" width="800">
+
+
