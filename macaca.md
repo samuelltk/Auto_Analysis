@@ -112,8 +112,8 @@ it('#1 should', function() {
 3.滑动     
 4.长按       
 5.可判断文字是否正确      
-6.截图          
-
+6.截图                          
+7.drag       
 
 元素查找方式：        
 1.elementById       
@@ -203,7 +203,7 @@ client端简单来讲就是我们的测试代码，我们测试代码中的一�
 
 而在应用级上的封装，二者均采用了Node.js作为开发语言，接口也基于web-driver实现，所以Macaca和Appium相似程度非常高。
 
-如何看待Macaca和Appium区别？
+**如何看待Macaca和Appium区别？**
 
 以下是Macaca作者的设计思想为：appium 是个优秀的工具。但无法满足更轻、更快、更稳、更易集成、更贴合业务的高要求。          
 可以认为Macaca是一个轻量级的Appium。当然，这就意味着很多Appium的功能会没有了。但这也造就了一个轻量级的，更易集成的框架。             

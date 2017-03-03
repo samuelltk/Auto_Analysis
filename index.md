@@ -35,6 +35,9 @@ Appuim还提供一个第三文的工具Appium Inspector
 
 * [控件查找:controls_operations文档](https://whuhan2013.github.io/Auto_Analysis/controls_operations)
 
+**参考**           
+[基于 appium 的自动化测试工具，支持多进程，性能采集分析等](https://testerhome.com/topics/6482)
+
 ## Auto_Analysis环境配置
 
 #### 安装node
